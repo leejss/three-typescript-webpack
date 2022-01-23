@@ -6,11 +6,14 @@
     "name": "leejss",
     "url": "https://thisisleejss.com"
   },
+  "type": "module",
   "devDependencies": {
     "@types/node": "^17.0.10",
     "@types/three": "^0.136.1",
+    "@types/webpack": "^5.28.0",
     "html-webpack-plugin": "^5.5.0",
     "three": "^0.136.0",
+    "ts-loader": "^9.2.6",
     "typescript": "^4.5.5",
     "webpack": "^5.67.0",
     "webpack-cli": "^4.9.1",
