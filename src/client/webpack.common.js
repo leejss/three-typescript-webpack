@@ -1,9 +1,22 @@
-import HtmlWebpackPlugin from "html-webpack-plugin";
-import path from "path";
-/** @type {import('webpack').Configuration} */
-const webpackCommonConfig = {
-  entry: "./src/index.ts",
-  module: {},
-};
+const path = require("path");
 
-export default webpackCommonConfig;
+/** @type {import('webpack').Configuration} */
+module.exports = {
+  entry: "./src/client/index.ts",
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        use: "ts-loader",
+        exclude: /node_modules/,
+      },
+    ],
+  },
+  resolve: {
+    extensions: [".tsx", ".ts", "..."],
+  },
+  output: {
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "../../dist/client"),
+  },
+};

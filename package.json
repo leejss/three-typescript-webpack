@@ -6,7 +6,9 @@
     "name": "leejss",
     "url": "https://thisisleejss.com"
   },
-  "type": "module",
+  "scripts": {
+    "bundle": "npx webpack build --config ./src/client/webpack.prod.js --stats verbose"
+  },
   "devDependencies": {
     "@types/node": "^17.0.10",
     "@types/three": "^0.136.1",
@@ -17,6 +19,7 @@
     "typescript": "^4.5.5",
     "webpack": "^5.67.0",
     "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.7.3"
+    "webpack-dev-server": "^4.7.3",
+    "webpack-merge": "^5.8.0"
   }
 }
